@@ -24,14 +24,13 @@ public class Archon extends Robot{
 
 
         see.spotEnemies();
-        spawn(RobotType.SOLDIER);
+        spawn(RobotType.TURRET);
+
         if(see.seenEnemies.length == 0){
             nav.moveRandom();
         }else {
             nav.flee();
         }
-
-
 
     }
 

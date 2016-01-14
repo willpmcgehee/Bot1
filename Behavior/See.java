@@ -15,6 +15,7 @@ public class See {
     public RobotInfo[] seenZombies;
     public RobotInfo[] seenOpponent;
     public RobotInfo[] seenEnemies;
+    public RobotInfo[] seenTeammates;
     public RobotInfo[] attackableZombies;
     public RobotInfo[] attackableOpponent;
     public RobotInfo[] attackableEnemies;
@@ -33,8 +34,10 @@ public class See {
         seenOpponent = rc.senseNearbyRobots(rc.getType().sensorRadiusSquared,opponent);
         seenEnemies = joinRobotInfo(seenZombies,seenOpponent);
 
+    }
 
-
+    public void spotTeammates() throws GameActionException{
+        seenTeammates = rc.senseNearbyRobots(rc.getType().sensorRadiusSquared,rc.getTeam());
     }
 
     public void targetEnemies() throws GameActionException{

@@ -20,70 +20,6 @@
 
         }
 
-        public void moveEast() throws GameActionException {
-
-            if(rc.canMove(Direction.EAST)){
-                rc.move(Direction.EAST);
-            }
-
-        }
-
-        public void moveWest() throws GameActionException {
-
-            if(rc.canMove(Direction.WEST)){
-                rc.move(Direction.WEST);
-            }
-
-        }
-
-        public void moveNorth() throws GameActionException {
-
-            if(rc.canMove(Direction.NORTH)){
-                rc.move(Direction.NORTH);
-            }
-
-        }
-
-        public void moveSouth() throws GameActionException {
-
-            if(rc.canMove(Direction.SOUTH)){
-                rc.move(Direction.SOUTH);
-            }
-
-        }
-
-        public void moveNorthEast() throws GameActionException {
-
-            if(rc.canMove(Direction.NORTH_EAST)){
-                rc.move(Direction.NORTH_EAST);
-            }
-
-        }
-
-        public void moveNorthWest() throws GameActionException {
-
-            if(rc.canMove(Direction.NORTH_WEST)){
-                rc.move(Direction.NORTH_WEST);
-            }
-
-        }
-
-        public void moveSouthEast() throws GameActionException {
-
-            if(rc.canMove(Direction.SOUTH_EAST)){
-                rc.move(Direction.SOUTH_EAST);
-            }
-
-        }
-
-        public void moveSouthWest() throws GameActionException {
-
-            if(rc.canMove(Direction.SOUTH_WEST)){
-                rc.move(Direction.SOUTH_WEST);
-            }
-
-        }
-
         public void flee() throws GameActionException {
             if(rc.isCoreReady()){
                 if(robot.see.seenEnemies != null && robot.see.seenEnemies.length > 0){
@@ -103,6 +39,7 @@
             }
 
         }
+
 
         public void moveToTargetLoc() throws GameActionException{
 

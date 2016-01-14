@@ -2,6 +2,7 @@ package PlayerA1;
 
 import PlayerA1.Units.Archon;
 import PlayerA1.Units.Soldier;
+import PlayerA1.Units.Turret;
 import battlecode.common.*;
 
 public class RobotPlayer {
@@ -21,6 +22,8 @@ public class RobotPlayer {
                 case ARCHON: robot = new Archon(rc);
                     break;
                 case SOLDIER: robot = new Soldier(rc);
+                    break;
+                case TURRET: robot = new Turret(rc);
                     break;
                 default:
                     throw new GameActionException(GameActionExceptionType.CANT_DO_THAT,
